@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker { image 'ruby:latest' } }
+    agent { 
+    	docker { 	
+            image 'ruby' 
+	} 
+    }
     stages {
         stage('build') {
             steps {
