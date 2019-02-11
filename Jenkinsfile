@@ -9,5 +9,4 @@ pipeline {
 		        sh 'ruby Test1.1'
             }
         }
-    }
 }
