@@ -19,5 +19,6 @@ pipeline {
             mail to: 'caleb.teo@workday.com',
             subject: 'Failed Pipeline: ${currentBuild.fullDisplayname}',
             body: 'Something is wrong with ${env.BUILD_URL}'
+        }
     }
 }
