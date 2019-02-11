@@ -6,19 +6,21 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ruby --version'
+                sh 'ruby Test1.1'
             }
         }
-        stage('to_fail') {
+        stage('test') {
             steps {
-                sh 'ruby Test1.'
+
             }
         }
     }
     post {
         failure {
-            mail to: 'caleb.teo@workday.com',
-            subject: 'Failed Pipeline: ${currentBuild.fullDisplayname}',
-            body: 'Something is wrong with ${env.BUILD_URL}'
+            echo 'failed'
+        }
+        success {
+            echo 'success'
         }
     }
 }
