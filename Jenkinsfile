@@ -1,12 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'ruby' }
+    }
 
-    stages {
-        stage('setup'){
-            steps {
-                sh 'apt-get install ruby'
-            }
-        }
         stage('build') {
             steps {
                 sh 'ruby --version'
