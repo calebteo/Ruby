@@ -6,7 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ruby --version'
-                sh 'ruby Test1.1'
+                sh 'ruby lib/Test1.rb'
             }
         }
         stage('test') {
